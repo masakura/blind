@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8"/>
     <title>Index Page</title>
@@ -9,7 +9,7 @@
 
     <ul>
       <% items.forEach(item => { %>
-      <li><%- item.name %></li>
+      <li><a href="/<%- item.id %>"><%- item.name %></a></li>
       <% }) %>
     </ul>
   </body>
