@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Blind SQL injection demo",
   "scripts": {
-    "server": "node index.js",
-    "crack": "node crack.js"
+    "server": "node app/index.js",
+    "crack": "node app/crack.js"
   },
   "keywords": [
     "sql",
