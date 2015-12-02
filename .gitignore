@@ -2,3 +2,8 @@
 #*
 .#*
 node_modules
+bower_components
+dist
+*.log
+.sass-cache
+index.html

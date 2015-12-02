@@ -1,0 +1,11 @@
+{
+  "generator-reveal": {
+    "presentationTitle": "Blind SQL Injection",
+    "packageVersion": "1.0.0",
+    "revealTheme": "black",
+    "useSass": false,
+    "deployToGithubPages": true,
+    "githubUsername": "masakura",
+    "githubRepository": "blind"
+  }
+}
