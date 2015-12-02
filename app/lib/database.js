@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const sqlite3 = require('sqlite3');
+const randomwords = require('random-words');
 
 module.exports = {
   setup() {
@@ -8,6 +9,10 @@ module.exports = {
     this.db.serialize(() => {
       const sqls = fs.readFileSync(path.join(__dirname, 'setup.sql'), 'utf-8');
       this.db.exec(sqls);
+
+      // add random table name
+      randomwords(3)
+        .forEach(word => this.db.exec(`create table ${word}(name)`));
     });
   },
   get(sql) {
