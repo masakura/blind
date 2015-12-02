@@ -2,8 +2,10 @@
   "name": "blind",
   "version": "1.0.0",
   "description": "Blind SQL injection demo",
-  "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "server": "node index.js",
+    "crack": "node crack.js"
+  },
   "keywords": [
     "sql",
     "injection",
