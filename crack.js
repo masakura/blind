@@ -1,15 +1,7 @@
-const request = require('request');
+const request = require('sync-request');
 
 function get(url) {
-  return new Promise((resolve, reject) => {
-    request(url, (error, response, body) => {
-      if (!error) {
-        resolve({response, body});
-      } else {
-        reject(error);
-      }
-    });
-  });
+  return request('GET', url);
 }
 
 function getTableName(name) {
@@ -25,13 +17,11 @@ function search(optBase) {
   chars
     .map(c => base + c)
     .forEach(name => {
-      getTableName(name)
-        .then(result => {
-          if (result.response.statusCode === 200) {
-            console.log(name + '*');
-            search(name);
-          }
-        });
+      const response = getTableName(name);
+      if (response.statusCode === 200) {
+        console.log(name + '*');
+        search(name);
+      }
     });
 }
 
