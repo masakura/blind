@@ -1,10 +1,4 @@
-
 # Blind SQL Injection
+脆弱性勉強会 #02
 
-From the terminal, pop in:
-
-  ```yo reveal:slide "Slide Title"```
-
-Available options:
-
- ```--markdown --attributes --notes```
+政倉 智
