@@ -36,6 +36,7 @@
   "scripts": {
     "test": "grunt test",
     "server": "node app/index.js",
-    "crack": "node app/crack.js"
+    "crack": "node app/crack.js",
+    "slide": "grunt serve"
   }
 }
